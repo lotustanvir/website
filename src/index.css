@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #829ab1;
+  --color-navy-500: #627d98;
+  --color-navy-600: #486581;
+  --color-navy-700: #334e68;
+  --color-navy-800: #243b53;
+  --color-navy-900: #102a43;
+  --color-navy-950: #0a1929;
+
+  --color-accent-50: #e6f6ff;
+  --color-accent-100: #bae3ff;
+  --color-accent-200: #7cc4fa;
+  --color-accent-300: #47a3f3;
+  --color-accent-400: #2186eb;
+  --color-accent-500: #0967d2;
+  --color-accent-600: #0552b5;
+  --color-accent-700: #03449e;
+  --color-accent-800: #01337d;
+  --color-accent-900: #002159;
+
+  --color-cool-50: #e0f7fa;
+  --color-cool-100: #b2ebf2;
+  --color-cool-200: #80deea;
+  --color-cool-300: #4dd0e1;
+  --color-cool-400: #26c6da;
+  --color-cool-500: #00bcd4;
+  --color-cool-600: #00acc1;
+  --color-cool-700: #0097a7;
+  --color-cool-800: #00838f;
+  --color-cool-900: #006064;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--color-accent-200);
+  color: var(--color-navy-900);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
